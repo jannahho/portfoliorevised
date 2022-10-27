@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+<div class="maincontainer">
+
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">_<br>_<br>_</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="illustration.html">Graphic</a>
+      <a href="video.html">Video</a>
+      <a href="misc.html">Miscellaneous</a>
+    </div>
+  </div>
+
+<!-- javascript from w3schools -->
+<script type="text/javascript">
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+  <div id="yellowcircle" >
+    <p class="maintext">
+      HANNAH JO <br>
+      PORTFOLIO
+    </p>
+  </div>
+
+
+
+  <div id="bluetriangle">
+    <a href="video.html" class="bluetributton" ></a>
+  </div>
+
+
+
+  <div id="yellowtriangle">
+    <a href="illustration.html" id="yellowtributton"></a>
+  </div>
+
+
+    <div id="redrectangle" >
+    </div>
+
+    <div id="bluecircle">
+    </div>
+
+
+  <div id="greenrectangle">
+    <button id="designbutton" onclick="changeBackgroundImage()" >design  </button>
+    <button id="productionbutton" onclick="rotateRectangle()" >production  </button>
+    <button id="funbutton" onclick="toggleDraggable()" >fun  </button>
+
+
+  </div>
+
+
+  <div id="orangerectangle">
+    <a href="misc.html" id="orangerecbutton"></a>
+  </div>
+
+
+  <div id="orangeline1">
+  </div>
+
+  <div id="orangeline2">
+  </div>
+
+
+  <div class="menuicon">
+  </div>
+
+
+
+
+
+
+<!-- javascript format from w3schools https://www.w3schools.com/howto/howto_js_draggable.asp  + alterations to function the way i want it to
+  calling Hover and cursor styling from https://stackoverflow.com/questions/5195303/set-css-property-in-javascript with a lot of alterations to be applicable to this project
+-->
+ <script type="text/javascript">
+
+   var backgroundImages = [
+     "papercrumple.png",
+     "paper0.jpeg",
+     "paper2.jpeg",
+     "paper1.jpeg",
+     "paper3.jpeg",
+     "paper4.jpeg",
+     "paper5.jpeg",
+     "paper6.jpg",
+     "paper7.jpeg",
+     "paper8.jpeg",
+     "paper9.jpg",
+     "papercrumple2.png"
+
+
+   ]
+   var backgroundImageCounter = -1;
+
+   var currentRectangeAngle = -40;
+
+   function changeBackgroundImage() {
+     backgroundImageCounter = (backgroundImageCounter + 1) % backgroundImages.length;
+     document.body.style["background-image"] = "url('" + backgroundImages[backgroundImageCounter] + "')";
+   }
+
+// rotate red rectangle everytime production is clicked
+    function rotateRectangle() {
+      currentRectangeAngle = (currentRectangeAngle + 10) % 360;
+      document.getElementById('redrectangle').style.transform = "rotate(" + currentRectangeAngle.toString() + "deg) translate(25%, 20%)";
+    }
+
+   const divs = document.querySelectorAll('div');
+   divs.forEach((dv) => {
+     // calling origingal css style to be true in appearance by setting it as the same color and cursor type, so that effect begins when pressing fun
+     if (dv.id == 'bluecircle') {
+       dv.style.setProperty('--bluecircle-background-color', '#226dc9');
+       dv.style.setProperty('--bluecircle-cursor', 'default');}
+
+     if (dv.id == 'yellowcircle') {
+       dv.style.setProperty('--yellowcircle-background-color', '#ffff70');
+       dv.style.setProperty('--yellowcircle-cursor', 'default');}
+
+     if (dv.id == 'bluetriangle') {
+       dv.style.setProperty('--bluetriangle-border-top', '9vw solid transparent');
+       dv.style.setProperty('--bluetriangle-border-left', '11vw solid #226dc9');
+       dv.style.setProperty('--bluetriangle-border-bottom', '9vw solid transparent');
+       dv.style.setProperty('--bluetriangle-cursor', 'default');
+     }
+
+     if (dv.id == 'yellowtriangle') {
+       dv.style.setProperty('--yellowtriangle-border-top', '0vw solid transparent');
+       dv.style.setProperty('--yellowtriangle-border-right', '20vw solid #ffff70');
+       dv.style.setProperty('--yellowtriangle-border-bottom', '18vw solid transparent');
+       dv.style.setProperty('--yellowtriangle-cursor', 'default');
+     }
+
+     if (dv.id == 'greenrectangle') {
+       dv.style.setProperty('--greenrectangle-background-color', '#24963f');
+       dv.style.setProperty('--greenrectangle-cursor', 'default');}
+
+     if (dv.id == 'orangerectangle') {
+       dv.style.setProperty('--orangerectangle-background-color', '#ff9e03');
+       dv.style.setProperty('--orangerectangle-cursor', 'default');}
+
+     if (dv.id == 'redrectangle') {
+       dv.style.setProperty('--redrectangle-background-color', '#f03d11');
+       dv.style.setProperty('--redrectangle-cursor', 'default');}
+
+     if (dv.id == 'orangeline1') {
+       dv.style.setProperty('--orangeline1-background-color', '#ff9e03');
+       dv.style.setProperty('--orangeline1-cursor', 'default');}
+
+     if (dv.id == 'orangeline2') {
+       dv.style.setProperty('--orangeline2-background-color', '#ff9e03');
+       dv.style.setProperty('--orangeline2-cursor', 'default');}
+   });
+
+// needed this function to start on the click of the word fun and not begin automatically
+   var draggable = false;
+   function toggleDraggable() {
+     draggable = true;
+
+     const divs = document.querySelectorAll('div');
+     divs.forEach((dv) => {
+// begin hover and cursor style after fun is clicked
+       if (dv.id == 'bluecircle') {
+         dv.style.setProperty('--bluecircle-background-color', '#1a559c');
+         dv.style.setProperty('--bluecircle-cursor', 'grab');}
+
+       if (dv.id == 'yellowcircle') {
+         dv.style.setProperty('--yellowcircle-background-color', '#dede5d');
+         dv.style.setProperty('--yellowcircle-cursor', 'grab');}
+
+       if (dv.id == 'bluetriangle') {
+         dv.style.setProperty('--bluetriangle-border-top', '9vw solid transparent');
+         dv.style.setProperty('--bluetriangle-border-left', '11vw solid #1a559c');
+         dv.style.setProperty('--bluetriangle-border-bottom', '9vw solid transparent');
+         dv.style.setProperty('--bluetriangle-cursor', 'grab');
+       }
+
+       if (dv.id == 'yellowtriangle') {
+         dv.style.setProperty('--yellowtriangle-border-top', '0vw solid transparent');
+         dv.style.setProperty('--yellowtriangle-border-right', '20vw solid #dede5d');
+         dv.style.setProperty('--yellowtriangle-border-bottom', '18vw solid transparent');
+         dv.style.setProperty('--yellowtriangle-cursor', 'grab');
+       }
+
+       if (dv.id == 'greenrectangle') {
+         dv.style.setProperty('--greenrectangle-background-color', '#1c7330');
+         dv.style.setProperty('--greenrectangle-cursor', 'grab');}
+
+       if (dv.id == 'orangerectangle') {
+         dv.style.setProperty('--orangerectangle-background-color', '#e38d02');
+         dv.style.setProperty('--orangerectangle-cursor', 'grab');}
+
+       if (dv.id == 'redrectangle') {
+         dv.style.setProperty('--redrectangle-background-color', '#d1330d');
+         dv.style.setProperty('--redrectangle-cursor', 'grab');}
+
+       if (dv.id == 'orangeline1') {
+         dv.style.setProperty('--orangeline1-background-color', '#e38d02');
+         dv.style.setProperty('--orangeline1-cursor', 'grab');}
+
+       if (dv.id == 'orangeline2') {
+         dv.style.setProperty('--orangeline2-background-color', '#e38d02');
+         dv.style.setProperty('--orangeline2-cursor', 'grab');}
+
+     });
+   }
+
+   document.getElementById("funbutton").addEventListener("click", dragElement);
+
+// defining which shapes are draggable
+   dragElement(document.getElementById("redrectangle"));
+   dragElement(document.getElementById("greenrectangle"));
+   dragElement(document.getElementById("yellowcircle"));
+   dragElement(document.getElementById("bluecircle"));
+   dragElement(document.getElementById("bluetriangle"));
+   dragElement(document.getElementById("orangerectangle"));
+   dragElement(document.getElementById("yellowtriangle"));
+   dragElement(document.getElementById("orangeline2"));
+   dragElement(document.getElementById("orangeline1"));
+
+function dragElement(elmnt) {
+// pick up shape from anywhere inside the shape
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id)) {
+    document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+
+  function dragMouseDown(e) {
+    // call location of cursor on screen
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // do function when cursor is moved
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    // call new cursor location
+    if (!draggable) {return;}
+    e = e || window.event;
+    e.preventDefault();
+
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+// put shape in new cursor location
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+// release shape when click is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+ </script>
+
+
+
+</div>
+
+
+
+
+  </body>
+</html>

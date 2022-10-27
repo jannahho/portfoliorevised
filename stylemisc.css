@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Kanit:wght@500&display=swap');
+
+body{
+  background-color: black;
+  font-family: 'Kanit', Sans-serif;
+}
+
+.maincontainer{
+  display: grid;
+  height:100vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "header header header"
+    "proto proto text1"
+    "text2 arvr arvr"
+    "collage collage text3";
+  grid-gap: 10%;
+}
+
+#paper2{
+  grid-area: text1;
+  width: 110%;
+  height: 100%
+  justify-self: end;
+}
+#paper3{
+  grid-area: text2;
+  width: 100%;
+}
+#paper1{
+  grid-area: text3;
+  width: 100%;
+  align-self: center;
+}
+
+#tag1{
+  grid-area: proto;
+  width: 40%;
+  margin-left: 2em;
+    z-index: 2;
+    transform: rotate(-18deg);
+
+}
+#tag2{
+  grid-area: collage;
+  width: 50%;
+  transform: rotate(-30deg);
+    z-index: 2;
+
+
+}
+#tag3{
+  grid-area: arvr;
+  width: 40%;
+  justify-self: end;
+  transform: rotate(20deg);
+  z-index: 2;
+}
+
+.prototagtext {
+  grid-area: proto;
+  color: black;
+  font-size: 3em;
+  z-index: 3;
+  margin-left: 4em;
+  transform: rotate(-18deg);
+  margin-top: -1em;
+}
+.arvrtagtext {
+  grid-area: arvr;
+  color: black;
+  font-size: 3em;
+  z-index: 3;
+  justify-self: end;
+  transform: rotate(20deg);
+  margin-right: 3em;
+}
+.collagetagtext {
+  grid-area: collage;
+  color: black;
+  font-size: 3em;
+  z-index: 3;
+  transform: rotate(-20deg);
+  margin-left: 4em;
+}
+
+.papertext1{
+  grid-area: text1;
+  align-self: center;
+  justify-self: center;
+  color: black;
+  font-size: .3em;
+  width: 50%;
+  height: 100%;
+  line-height: 5em;
+  margin-left: 8em;
+  margin-top: 10em;
+}
+
+.papertext1>p{
+  color: black;
+  font-size: 2em;
+  font-style: bold;
+}
+
+.papertext2{
+  grid-area: text2;
+    align-self: center;
+    justify-self: center;
+    color: black;
+    font-size: .3em;
+    width: 50%;
+    height: 100%;
+    line-height: 5em;
+    margin-left: 8em;
+    margin-top: 28em;
+}
+
+.papertext2>p{
+  color: black;
+  font-size: 2em;
+  font-style: bold;
+}
+
+
+.papertext3{
+  grid-area: text3;
+    align-self: center;
+    justify-self: center;
+    color: black;
+    font-size: .3em;
+    width: 50%;
+    height: 100%;
+    line-height: 5em;
+    margin-left: 8em;
+    margin-top: 150em;
+}
+
+.papertext3>p{
+  color: black;
+  font-size: 2em;
+  font-style: bold;
+}
+
+.protocontent{
+  grid-area: proto;
+  justify-self: center;
+  align-self:center;
+  margin-left: 8em;
+  justify-content: center;
+}
+
+
+.protocontent *{
+  width:15vw;
+  margin: 2em;
+  z-index: 1;
+}
+
+.arvrcontent {
+  grid-area: arvr;
+  justify-self: center;
+  align-self:center;
+  z-index: 1;
+}
+
+.arvrcontent * {
+ width: 15vw;
+ margin: 2em;
+}
+
+.collagecontent{
+  grid-area: collage;
+  justify-self: center;
+  align-self: center;
+  margin-top: 17em;
+  margin-left: 9em;
+  z-index: 1;
+}
+
+.collagecontent *{
+  width: 15vw;
+  margin: 2em;
+}
+
+
+.headerletters{
+  grid-area: header;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20vh;
+}
+
+.headerletters *{
+  margin: .1vh;
+  display: inline-block;
+  text-align: center;
+}
+
+/* stroke webkit from https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-stroke-color */
+.M {
+  background: #65a3c2;
+  transform: rotate(20deg);
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #51849e;
+  font-size: 4.1em;
+  width: 6.8vw;
+  height: 7.3vw;
+}
+
+.I{
+  background: #98bf7e;
+  transform: rotate(-10deg);
+  color: #307502;
+  border: 2em;
+  border-color: white;
+  font-size: 4em;
+  width: 6.8vw;
+  height: 6.9vw;
+}
+
+.S {
+  background: #f09724;
+  transform: rotate(-10deg);
+  color: #5e1214;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #cc9193;
+  font-size: 3.9em;
+  width: 6.4vw;
+  height: 6.4vw;
+}
+
+.C {
+  background: #91a5cc;
+  transform: rotate(18deg);
+  color: #f0ecbd;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #b5af5b;
+  font-size: 4.2em;
+  width: 6.8vw;
+  height: 7vw;
+}
+
+.E {
+  background: #cc3b40;
+  transform: rotate(-8deg);
+  color: #28346b;
+  font-size: 4em;
+  width: 7vw;
+  height: 7.4vw;
+}
+
+.L {
+  background: #74b0aa;
+  transform: rotate(-28deg);
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #09423d;
+  font-size: 4em;
+  width: 6.2vw;
+  height: 6.5vw;
+}
+.L2 {
+  background: #f7f294;
+  transform: rotate(20deg);
+  color: #35363b;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #51849e;
+  font-size: 3.8em;
+  width: 6.3vw;
+  height: 7vw;
+}
+.A {
+  background: #b86caf ;
+  transform: rotate(15deg);
+  color: #9ba7de;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ba9eb7;
+  font-size: 3.7em;
+  width: 6vw;
+  height: 6.5vw;
+}
+
+.N {
+  background: #233582;
+  transform: rotate(-28deg);
+  color: #418223;
+  font-size: 4em;
+  width: 7vw;
+  height: 6.9vw;
+}
+.E2 {
+  background: #bac253;
+  transform: rotate(26deg);
+  color: pink;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  font-size: 4em;
+  width: 6.9vw;
+  height: 6.5vw;
+}
+
+.O {
+  background: #f2cbb8;
+  transform: rotate(-20deg);
+  color: #65856c;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #551680;
+  font-size: 4.4em;
+  width: 7.3vw;
+  height: 7vw;
+}
+.U {
+  background:#696585 ;
+  transform: rotate(24deg);
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #51849e;
+  font-size: 4.3em;
+  width: 6vw;
+  height: 7vw;
+}
+.S2 {
+  background: #bf1972 ;
+  transform: rotate(-15deg);
+  color: #cff7a3;
+  font-size: 3.9em;
+  width: 7vw;
+  height: 6vw;
+}
+
+.recbutton{
+  grid-area: header;
+  z-index: 2;
+  width: 10vw;
+  height: 13vh;
+  margin-top: 0px;
+  justify-self: center;
+  align-self: start;
+  background: green;
+}
+
+.dropbtn {
+  /* grid-column: 1 / 1;
+  grid-row: 1/1; */
+  grid-area: header;
+  background-color: transparent;
+  color:  #dfe8d5;
+  font-size: 80px;
+  border: none;
+  cursor: pointer;
+  line-height: 10px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  z-index: 100;
+}
+
+.dropbtn:active{
+  color: black; }
+
+.dropdown {
+  grid-area: header;
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+}
+
+.dropdown-content {
+  grid-area: header;
+  display: none;
+  position: absolute;
+  background-color: #dfe8d5;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  font-family: 'Kanit', sans-serif;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {color: white;}
+
+.show {display:block;}

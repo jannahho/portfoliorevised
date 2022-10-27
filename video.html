@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylevideo.css">
+    <title></title>
+  </head>
+  <body>
+
+  <div class="maincontainer">
+
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">_<br>_<br>_</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="illustration.html">Graphics</a>
+        <a href="video.html">Video</a>
+        <a href="misc.html">Miscellaneous</a>
+      </div>
+    </div>
+
+    <!-- javascript from w3schools -->
+    <script type="text/javascript">
+    function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+    }
+    </script>
+
+  <h1>VIDEO</h1>
+<div class="photoslide">
+  <img class="mySlides" src="museum.JPG">
+  <img class="mySlides" src="museum2.JPG">
+  <img class="mySlides" src="sohee.JPG">
+  <img class="mySlides" src="chubimage.JPG">
+  <img class="mySlides" src="don.jpeg">
+  <img class="mySlides" src="chub2.JPG">
+  <img class="mySlides" src="apple.jpeg">
+</div>
+
+<!-- photo slides javascript from w3schools -->
+<script type="text/javascript">
+  var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+
+<div class="aprilfoolsvid">
+  <video src="aprilfools.mov" controls></video>
+  <p class="italicize">April Day (2022)</p>
+    <p> Silent short film made for Still and Moving images course.
+  </p>
+</div>
+
+<div class="montagevid">
+  <video src="montage.mov" controls></video>
+  <p class="italicize">Masked Feeling (2022)</p>
+  <p>Montage film made for Still and Moving images course.</p>
+</div>
+
+<div class="cineromanvid">
+  <video src="cineroman.mov" controls></video>
+  <p class="italicize">Capitalist Religion (2022)</p>
+  <p>Ciné-Roman made for Still and Moving images course.</p>
+</div>
+
+<div class="divider">
+  <div class="line1"></div>
+  <p>just for fun</p>
+  <div class="line2"></div>
+</div>
+
+
+<div class="ummavid">
+  <video src="umma.mov" controls></video>
+  <p>2019</p>
+</div>
+
+<div class="joechristmasvid">
+  <video src="joechristmas.mov" controls></video>
+  <p>2021</p>
+</div>
+
+<div class="captainhookvid">
+  <video src="captainhook.MP4" controls></video>
+  <p>2020</p>
+</div>
+
+<div class="alfredvid">
+  <video src="alfred.MOV" controls></video>
+  <p>2017</p>
+</div>
+
+<!-- <div class="bigbearvid">
+  <video src="bigbear.mov" controls></video>
+  <p>2018</p>
+</div> -->
+
+
+
+
+
+
+
+  </div>
+  </body>
+</html>
