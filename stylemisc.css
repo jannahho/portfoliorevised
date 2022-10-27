@@ -61,28 +61,29 @@ body{
 .prototagtext {
   grid-area: proto;
   color: black;
-  font-size: 3em;
+  font-size: 3vw;
   z-index: 3;
-  margin-left: 4em;
+  margin-left: 25%;
   transform: rotate(-18deg);
-  margin-top: -1em;
+  margin-top: -2%;
 }
 .arvrtagtext {
   grid-area: arvr;
   color: black;
-  font-size: 3em;
+  font-size: 3vw;
   z-index: 3;
   justify-self: end;
   transform: rotate(20deg);
-  margin-right: 3em;
+  margin-right: 20%;
+  margin-top: 7%;
 }
 .collagetagtext {
   grid-area: collage;
   color: black;
-  font-size: 3em;
+  font-size: 3vw;
   z-index: 3;
   transform: rotate(-20deg);
-  margin-left: 4em;
+  margin-left: 30%;
 }
 
 .papertext1{
