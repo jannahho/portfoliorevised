@@ -122,6 +122,7 @@ window.onclick = function(event) {
 
    var currentRectangeAngle = -40;
 
+// change background everytime design is clicked
    function changeBackgroundImage() {
      backgroundImageCounter = (backgroundImageCounter + 1) % backgroundImages.length;
      document.body.style["background-image"] = "url('" + backgroundImages[backgroundImageCounter] + "')";
